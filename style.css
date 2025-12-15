@@ -1,0 +1,126 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:#0f2027;
+  overflow:hidden;
+  color:#fff;
+}
+
+.bg-anim{
+  position:absolute;
+  width:200%;
+  height:200%;
+  background:linear-gradient(45deg,#ff512f,#dd2476,#1fa2ff,#12d8fa,#a6ffcb);
+  animation:bgMove 14s infinite linear;
+  z-index:-1;
+}
+
+@keyframes bgMove{
+  0%{transform:translate(-25%,-25%) rotate(0deg);}
+  100%{transform:translate(-25%,-25%) rotate(360deg);}
+}
+
+.card{
+  width:360px;
+  background:rgba(0,0,0,0.6);
+  backdrop-filter:blur(10px);
+  border-radius:20px;
+  padding:30px 25px;
+  text-align:center;
+  animation:fadeUp 1s ease;
+}
+
+@keyframes fadeUp{
+  from{opacity:0; transform:translateY(30px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+.avatar-wrapper{
+  width:120px;
+  height:120px;
+  margin:0 auto 15px;
+  border-radius:50%;
+  padding:4px;
+  background:linear-gradient(45deg,#ff512f,#1fa2ff);
+  animation:pop 2s infinite;
+}
+
+@keyframes pop{
+  0%{transform:scale(1);}
+  50%{transform:scale(1.08);}
+  100%{transform:scale(1);}
+}
+
+.avatar{
+  width:100%;
+  height:100%;
+  border-radius:50%;
+  object-fit:cover;
+}
+
+h1{
+  font-size:26px;
+  font-weight:700;
+}
+
+.subtitle{
+  font-size:14px;
+  opacity:0.9;
+  margin-bottom:15px;
+}
+
+.timer{
+  font-size:32px;
+  font-weight:700;
+  margin:10px 0;
+  color:#00ffcc;
+}
+
+.seconds-left{
+  font-size:12px;
+  opacity:0.8;
+  margin-bottom:20px;
+}
+
+.cta{
+  display:inline-block;
+  padding:12px 20px;
+  border-radius:30px;
+  background:linear-gradient(45deg,#ff512f,#dd2476);
+  color:#fff;
+  text-decoration:none;
+  font-weight:600;
+  transition:transform .2s, box-shadow .2s;
+}
+
+.cta:hover{
+  transform:scale(1.05);
+  box-shadow:0 0 20px rgba(255,81,47,0.6);
+}
+
+.tagline{
+  margin-top:15px;
+  font-size:13px;
+  opacity:0.85;
+}
+
+.divider{
+  height:1px;
+  background:rgba(255,255,255,0.2);
+  margin:15px 0;
+}
+
+.disclaimer{
+  font-size:11px;
+  line-height:1.5;
+  opacity:0.7;
+}
